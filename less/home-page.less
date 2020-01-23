@@ -1,21 +1,47 @@
 .home {
 
+  .welcome {
+
+    @media @mobile {
+      flex-direction: column;
+      align-content: center;
+      margin: 0 auto;
+      width: 75%;
+    }
+  }
+
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
+    @media @mobile {
+      flex-direction: column;
+      align-content: center;
+      margin: 0 auto;
+
+    }
+
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+
+      @media @mobile {
+        width: 75%;
+        margin: 30px auto 30px;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+
+      @media @mobile {
+        width: 75%;
+      }
+
 
       img {
         border-radius: 10px;
@@ -26,6 +52,12 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile {
+      flex-direction: column-reverse;
+      align-content: center;
+      width: 100%;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -41,6 +73,7 @@
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+    padding-top: 30px;
 
     img {
       border-radius: 10px;
@@ -52,10 +85,53 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    width: 100%;
+
+
+    @media @mobile {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+      padding-left: 50px;
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      align-items: flex-start;
+
+
+      @media @mobile {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        // justify-content: space-between;
+      }
+
+      .btn {
+        display: flex;
+
+        @media @mobile {
+          width: 100%;
+          margin: 30px auto 30px;
+          justify-content: center;
+        }
+      }
+
+      .btn-son {
+        .custom-btn();
+      }
     }
   }
-}// home
+}
+
+// home
+
+.top {
+  border-bottom: dashed grey 2px;
+
+  h2 {
+    padding-top: 5%;
+  }
+}
